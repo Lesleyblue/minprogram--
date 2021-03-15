@@ -1,0 +1,14 @@
+<!--pages/view-all/view-all.wxml-->
+<!--pages/search/search.wxml-->
+<view class="page">
+    <view class="list">
+        <view class="content" wx:for="{{list}}">
+            <image class="icon" mode="aspectFill" src="{{item.accustom_icon}}" />
+            <view class="accustom-des">
+                <view class="name">{{item.accustom_name}}</view>
+                <view class="des">已有{{item.insist_nums}}位萌友在坚持</view>
+            </view>
+            <view class="btn" id="{{item.accustom_name}}" bindtap="entry">加入</view>
+        </view> 
+    </view>
+</view>

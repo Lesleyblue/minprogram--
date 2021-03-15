@@ -1,0 +1,22 @@
+<!--pages/shequ/shequ.wxml-->
+<view class="title"><text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;关注</text></view>
+<view class="context" wx:for="{{list}}">
+    <view class="person-msg" hover-class="none" hover-stop-propagation="false">
+        <image class="my-icon" src="{{item.icon}}"></image>
+        <view class="my-msg">
+            <view class="my-name">{{item.nickname}}</view>
+            <view class="my-accustom"><text style="color: grey; font-size: 12px;">坚持</text>#{{item.accustom_name}}#</view>
+        </view>
+        <view class="date">
+            <view class="create-at"></view>
+            <view class="insist-days">{{item.day}}天
+                <image class="day-icon" mode="aspectFill" src="https://pics.images.ac.cn/image/5ef9d721770dc.html"/>
+            </view>
+        </view>
+    </view>
+    <view class="content">{{item.word}}</view>
+    <view class="points">
+        <view class="point-num">10</view>
+        <image class="day-icon" mode="aspectFill" src="https://pics.images.ac.cn/image/5ef9d75701b8e.html"/>
+    </view>
+</view>

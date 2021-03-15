@@ -1,0 +1,21 @@
+<!-- index.wxml-->
+<view class="accustom" hover-class="none" hover-stop-propagation="false" wx:for="{{list}}">
+   <view class="box" id="{{item._id}}" bindtap="toCustom" bindlongtap="select">
+         <image class="icon-box" mode="aspectFill" src="{{item.accustom_icon}}"/> 
+         <view class="name-box" hover-class="none" hover-stop-propagation="false">
+            <view class="name">{{item.accustom_name}}</view>
+            <view class="record">已坚持{{item.day}}天</view>
+         </view>
+         <!-- 习惯是否仅自己可见 默认可见即不显示这个元素 -->
+         <view class="lock" wx:if="{{false}}">x</view>
+         <!-- 是否完成了今天的打卡 -->
+         <view class="is-finsh" wx:if="{{item.is_clock==1?1:0}}">
+            <image class="is-finsh" mode="aspectFill" src="https://pics.images.ac.cn/image/5ef9d2f0c4447.html"/>
+         </view>
+   </view>
+</view>
+<view class="add-accustom" hover-class="none" hover-stop-propagation="false" bindtap="toAdd">
+  添加习惯
+</view>
+<window show="true" wx:if="{{hidden}}"></window>
+<!-- <button bindtap="get">获取id</button> -->

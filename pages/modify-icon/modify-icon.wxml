@@ -1,0 +1,29 @@
+<!--pages/modify-icon/modify-icon.wxml-->
+<!-- bindtap是点击事件 
+   无法在小程序中的事件传递参数
+   通过自定义属性的方式来传递参数
+   自定义属性写法： date="{{1}}" 
+   在e中获取自定义属性的值
+-->
+<view class="page">
+    <view class="custom">
+        <image class="custom-icon" mode="aspectFill" src="{{icon}}" />
+        <view class="custom-des">
+             <view class="name">{{name}}</view>
+             <view class="des">已坚持{{day}}天</view>
+        </view>
+        <view class="btn-certain" bindtap="certain">确定</view>
+    </view>
+    <view class="icons">
+        <view class="btns">
+            <view class="btn {{className==1?'study':' '}}" data-num="{{1}}" bindtap="getImage" data-url="{{'/icon/shenghuo/'}}">生活</view>
+            <view class="btn {{className==2?'study':' '}}" data-num="{{2}}" bindtap="getImage" data-url="{{'/icon/study/'}}">学习</view>
+            <view class="btn {{className==3?'study':' '}}" data-num="{{3}}" bindtap="getImage" data-url="{{'/icon/sport/'}}">运动</view>
+            <view class="btn {{className==4?'study':' '}}" data-num="{{4}}" bindtap="getImage" data-url="{{'/icon/health/'}}">健康</view>
+            <view class="btn {{className==5?'study':' '}}" data-num="{{5}}" bindtap="getImage" data-url="{{'/icon/else/'}}">其他</view>
+        </view>
+        <view wx:for="{{list}}">
+            <image id="{{item.url}}" class="icon-life" mode="aspectFill" src="{{item.url}}" bindtap="changeIcon"/>
+        </view>
+    </view>
+</view>

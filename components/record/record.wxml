@@ -1,0 +1,12 @@
+<!--components/record/record.wxml-->
+<view>
+    <view class='modal-mask' wx:if='{{show}}'>
+        <view class='modal-content'>
+            <textarea bindinput="change" id="" cols="30" rows="10" placeholder="写下今天做了什么和收获吧~"></textarea>
+            <view class='modal-footer'>
+                <view class="btn" bindtap='cancel'>取消</view> 
+                <view class="btn" bindtap='confirm'>发布</view>  
+            </view>
+        </view>
+    </view>
+</view>

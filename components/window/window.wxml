@@ -1,0 +1,19 @@
+<!--components/window/window.wxml-->
+<view>
+    <view class='modal-mask' wx:if='{{show}}'>
+        <view class='modal-content'>
+          <scroll-view class='main-content'>
+            <view class="title">微信授权</view>
+            <view class="content">
+                <image class="icon" mode="aspectFill" src="https://pics.images.ac.cn/image/5ef9d28d03667.html"/> 
+                <view class="op">一路向北呀呀 申请获得以下权限</view>
+            </view>
+            <view class="detail">○获得你的公开信息(昵称、头像、地区、及性别)</view>
+          </scroll-view>
+          <view class='modal-footer'>
+            <button wx:if='{{!single}}' class='cancel-btn' bindtap='cancel'>取消</button>
+            <button class='confirm-btn' bindtap='confirm' open-type="getUserInfo" bindgetuserinfo="getUserInfo">确定 </button>
+          </view>
+        </view>
+    </view>
+</view>

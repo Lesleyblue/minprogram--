@@ -1,0 +1,18 @@
+<!--pages/search/search.wxml-->
+<view class="page">
+    <view class="search-bar">
+        <icon class="icon-small" type="search" size="14"></icon>
+        <input bindinput="search" />
+    </view>
+    <view class="title">智能推荐</view>
+    <view class="recommend-list">
+        <view class="recommend" wx:for="{{list}}">
+            <image class="user-icon" mode="aspectFill" src="{{item.icon}}"/>
+            <view class="user-des">
+                <view class="nickname">{{item.nickname}}</view>
+                <view class="des">{{item.des}}</view>
+            </view>
+            <view class="btn" bindtap="concern" id="{{item.user_id}}">关注</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+<!--components/change/change.wxml-->
+<view>
+    <view class='modal-mask' wx:if='{{show}}'>
+        <view class='modal-content'>
+          <scroll-view class='main-content'>
+            <view class="title">{{word}}习惯成功</view>
+            <view class="detail">是否配置不一样的习惯图标？</view>
+          </scroll-view>
+          <view class='modal-footer'>
+            <button wx:if='{{!single}}' class='cancel-btn' bindtap='cancel'>取消</button>
+            <navigator class="confirm-btn" url="/pages/modify-icon/modify-icon">去配置</navigator>
+          </view>
+        </view>
+    </view>
+</view>

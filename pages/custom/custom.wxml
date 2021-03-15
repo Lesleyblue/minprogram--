@@ -1,0 +1,12 @@
+<!--pages/custom/custom.wxml-->
+<view class="clock">
+    <view class="time">{{time}}</view>
+    <image class="clock-icon" mode="aspectFill" src='{{imageUrl}}' bindtap="modify"/>
+    <view class="record" hidden="{{hidden}}" bindtap="toRecord">记录心情</view>
+</view>
+<view class="sta">
+    <image class="sta-icon" mode="aspectFill" src="https://pics.images.ac.cn/image/5ef9d786c8153.html"/>
+    <view class="word">坚持统计</view>
+    <view class="insist-days">已坚持{{day}}天</view>
+</view>
+<record show="{{show}}" name="{{name}}"></record>

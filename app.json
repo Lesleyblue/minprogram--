@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my-page/my-page",
+    "pages/find/find",
+    "pages/modify-icon/modify-icon",
+    "pages/add/add",
+    "pages/shequ/shequ",
+    "pages/search/search",
+    "pages/view-all/view-all",
+    "pages/custom/custom",
+    "pages/statis/statis",
+    "pages/person/person",
+    "pages/modify-des/modify-des",
+    "pages/person-page/person-page",
+    "pages/method/method",
+    "pages/record/record"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "萌芽习惯",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#eee"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "习惯",
+        "iconPath": "icon/edit.png",
+        "selectedIconPath": "icon/_edit.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "icon/find.png",
+        "selectedIconPath": "icon/_find.jpg"
+      },
+      {
+        "pagePath": "pages/shequ/shequ",
+        "text": "社区",
+        "iconPath": "icon/shequ.png",
+        "selectedIconPath": "icon/_shequ.jpg"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "icon/person.png",
+        "selectedIconPath": "icon/_person.jpg"
+      }
+    ],
+    "color": "#888",
+    "selectedColor": "#09bb07",
+    "backgroundColor": "#fff"
+  },
+  "sitemapLocation": "sitemap.json",
+  "component": true
+}

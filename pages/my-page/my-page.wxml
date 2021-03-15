@@ -1,0 +1,25 @@
+<!--pages/my-page/my-page.wxml-->
+<view class="my-msg">
+    <image class="my-icon" mode="aspectFill" src="{{message[0].icon}}"/>
+    <view class="nickname">{{message[0].nickname}}</view>
+    <view class="des">{{message[0].des}}</view>
+</view>
+<view class="box">
+    <view class="num fans-num" bindtap="showList" data-id="0">粉丝{{fansNums}}</view>
+    <view class="num concern-num" bindtap="showList" data-id="1">关注{{concernNums}}</view>
+</view>
+<view class="my-custom">{{num}}个习惯我在坚持</view>
+<swiper circular='true' style="height: 230px;" previous-margin="100px" next-margin="100px" current="0" bindchange="yearSwiperChange">
+    <swiper-item wx:for="{{list}}">
+        <view class="custom-list">
+            <view class="custom {{swiperCurrent == index ? 'active' : ''}}">
+                <view class="inner">
+                    <image class="custom-icon {{swiperCurrent == index ? 'aftericon' : ''}} " mode="aspectFill" src="{{item.accustom_icon}}"/>
+                </view>
+                <view class="custom-name {{swiperCurrent == index ? 'aftername' : ''}}" >{{item.accustom_name}}</view>
+                <view class="days {{swiperCurrent == index ? 'afterdays' : ''}}">{{item.day}}天</view>
+                <image class="delete {{swiperCurrent == index ? 'afterd' : ''}}" mode="aspectFill" src="https://pics.images.ac.cn/image/5ef9d43bcd650.html"/>
+            </view> 
+        </view>
+    </swiper-item>
+</swiper>

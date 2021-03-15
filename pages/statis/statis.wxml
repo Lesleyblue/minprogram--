@@ -1,0 +1,25 @@
+<!--pages/statis/statis.wxml-->
+<view class="title">全部习惯今天统计</view>
+<view class="page">
+    <view class="finish-por">
+        <view class="box">
+            <view class="por">{{por}}</view>
+            <view class="box-1">%</view>
+        </view>
+        <view class="box-1">完成率</view>
+    </view>
+</view>
+<view class="box-2">
+    <view class="num finish-num">
+        <view class="one">{{finish}}</view>
+        <view class="word">已完成</view>
+    </view>
+    <view class="num fail-num">
+        <view class="two">{{fail}}</view>
+        <view class="word">未完成</view>
+    </view>
+    <view class="num insist-num">
+        <view class="three">{{insist}}</view>
+        <view class="word">坚持中</view>
+    </view>
+</view>

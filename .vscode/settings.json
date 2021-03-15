@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.wxml": "html",
+        "*.wxss": "css"
+    },
+    "python.pythonPath": "C:\\Users\\win10\\AppData\\Local\\Programs\\Python\\Python38\\python.exe"
+}

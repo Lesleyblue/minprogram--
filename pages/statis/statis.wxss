@@ -1,0 +1,67 @@
+/* pages/statis/statis.wxss */
+.title{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.page{
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.finish-por{
+    margin-top: 20px;
+    border: 1px solid rgb(133, 127, 127);
+    border-radius: 200px;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.por{
+    font-size: 30px;
+    margin-right: 5px;
+}
+.box{
+    display: flex;
+}
+.box-1{
+    margin-top: 20px;
+    font-size: 12px;
+    color: rgb(104, 100, 100);
+}
+.box-2{
+    padding: 5px 25px;
+    box-sizing: border-box;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.num{
+    width: 90px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.one{
+    font-size: 25px;
+    color: rgb(77, 77, 224);
+}
+.two{
+    font-size: 25px;
+    color: rgb(218, 45, 45);
+}
+.three{
+    font-size: 25px;
+    color: #000;
+}
+.word{
+    font-size: 13px;
+    color: rgb(104, 100, 100);
+}

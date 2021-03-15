@@ -1,0 +1,35 @@
+<!--pages/add/add.wxml-->
+<!--pages/search/search.wxml-->
+<view class="page">
+    <view class="create-accustom">
+        <view class="create-icon">
+            <image class="create-icon" mode="aspectFill" src="https://pics.images.ac.cn/image/5efa05e38ae45.html"/>
+        </view>
+        <input placeholder="输入你要创建的习惯" placeholder-style="font-size: 12px" bindinput="handle" />
+    </view>
+    <view class="radio">
+        <radio-group bindchange="checkSort">
+            <label wx:for="{{item}}">
+                <radio value="{{item.value}}" checked="{{item.checked}}">{{item.name}}</radio>
+            </label> 
+        </radio-group>
+    </view>
+    <view class="confirm" data-num="{{checkSort}}" bindtap="addData">确定创建</view>
+    <view class="title">智能推荐</view>
+    <view class="list" bindtap="getData" wx:for="{{array}}">
+        <view wx:for="{{item}}">
+            <view class="content">
+                <image class="icon" mode="aspectFill" src="{{item.accustom_icon}}"/>
+                <view class="accustom-des">
+                    <view class="name">{{item.accustom_name}}</view>
+                    <view class="des">已有{{item.insist_nums}}位萌友在坚持</view>
+                </view>
+                <view class="btn" id="{{item.accustom_name}}" bindtap="entry">加入</view>
+             </view> 
+        </view>
+    </view>
+</view>
+
+<change show="{{show}}" word="创建" > </change>
+
+

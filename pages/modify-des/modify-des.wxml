@@ -1,0 +1,3 @@
+<!--pages/modify-des/modify-des.wxml-->
+<textarea name="" id="" cols="30" rows="10" placeholder="修改你的个人签名~" bindinput="getContent"></textarea>
+<view class="btn" bindtap="change">确定</view>

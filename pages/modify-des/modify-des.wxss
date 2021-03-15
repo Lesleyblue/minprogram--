@@ -1,0 +1,31 @@
+/* pages/modify-des/modify-des.wxss */
+page{
+    background-color: #eee;
+    padding: 20px 20px;
+}
+textarea{
+    margin-top: 10px;
+    width: 680rpx;
+    height: 80px;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border-style: solid;
+    box-shadow:0px 2px 4px 2px #DDDDDD;
+    border-width: 0rpx;
+}
+.btn{
+    margin-left: 5px;
+    width: 65px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: rgb(247, 192, 91);
+    font-size: 12px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}

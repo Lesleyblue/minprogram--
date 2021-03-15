@@ -1,0 +1,8 @@
+<!--pages/record/record.wxml-->
+<view wx:for="{{list}}">
+    <view class="row" wx:for="{{item}}">
+        <image class="icon" mode="aspectFill" src="{{item.icon}}"/>
+        <view class="name">{{item.nickname}}</view>
+    </view>
+   
+</view>

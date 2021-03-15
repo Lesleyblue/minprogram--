@@ -1,0 +1,45 @@
+<!--pages/person/person.wxml-->
+<view class="person-msg">
+    <image class="icon" src="{{userInfo.avatarUrl}}"></image>
+    <view class="msg" hover-class="none" hover-stop-propagation="false">
+        <view class="nickname">{{userInfo.nickName}}</view>
+        <view class="sign">{{des}}</view>
+        <view class="energy">
+            <image class="energy-icon" mode="aspectFill" src="https://pics.images.ac.cn/image/5ef9d487e5133.html"/>{{energy}}g
+        </view>
+    </view>
+</view>
+<view class="select">
+    <view class="nag" bindtap="toMyPage">
+        <image class="select-icon" mode="aspectFill" src="/icon/person.png"/>
+        <view class="word">我的主页</view>
+        <image class="go-to" src="https://pics.images.ac.cn/image/5ef9d3cdc6ac9.html" mode="aspectFill"></image>
+    </view>
+    <view class="nag" bindtap="toStatis">
+        <image class="select-icon" mode="aspectFill" src="https://pics.images.ac.cn/image/5ef9d7e355635.html"/>
+        <view class="word">坚持统计</view>
+        <image class="go-to" src="https://pics.images.ac.cn/image/5ef9d3cdc6ac9.html" mode="aspectFill"></image>
+    </view>
+    <view class="nag" bindtap="toModifyDes">
+        <image class="select-icon" mode="aspectFill" src="https://pics.images.ac.cn/image/5ef9dafe0fa5a.html"/>
+        <view class="word">修改信息</view>
+        <image class="go-to" src="https://pics.images.ac.cn/image/5ef9d3cdc6ac9.html" mode="aspectFill"></image>
+    </view>
+</view>
+<view class="select">
+    <view class="nag" bindtap="toMethod">
+        <image class="select-icon" mode="aspectFill" src="https://pics.images.ac.cn/image/5ef9d63d2e745.html"/>
+        <view class="word">使用 & 攻略 &文章</view>
+        <image class="go-to" src="https://pics.images.ac.cn/image/5ef9d3cdc6ac9.html" mode="aspectFill"></image>
+    </view>
+    <button open-type="share" class="nag" size="default">
+        <image class="select-icon" mode="aspectFill" src="https://pics.images.ac.cn/image/5ef9d55988aaa.html"/>
+        <view class="word">推荐[萌芽习惯]</view>
+        <image class="go-to" src="https://pics.images.ac.cn/image/5ef9d3cdc6ac9.html" mode="aspectFill"></image>
+    </button>
+    <button open-type="contact" class="nag" size="default">
+        <image class="select-icon" mode="aspectFill" src="https://pics.images.ac.cn/image/5ef9d6f179431.html"/>
+        <view class="word">反馈 & 客服</view>
+        <image class="go-to" src="https://pics.images.ac.cn/image/5ef9d3cdc6ac9.html" mode="aspectFill"></image>
+    </button>
+</view>

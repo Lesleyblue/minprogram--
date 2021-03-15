@@ -1,0 +1,173 @@
+<!--pages/find/find.wxml-->
+<view class="body" hover-class="none" hover-stop-propagation="false">
+    <!-- 放轮播图的 -->
+    <view class="imgs" hover-class="none" hover-stop-propagation="false">
+        <swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='2000' duration='1000' circular='true'>
+            <block wx:for="{{bnrUrl}}" wx:for-index="index">
+              <swiper-item>
+                <image src='{{item.url}}' class='u-img-slide' mode='aspectFill'></image>
+              </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- 值得关注 -->
+    <view class="concern" hover-class="none" hover-stop-propagation="false">
+        <view class="one" hover-class="none" hover-stop-propagation="false">
+            <view class="name">值得关注</view>
+            <view class="detail" bindtap="toSearch">搜索好友</view>
+        </view>
+        <view class="two">
+                <view class="concern-user"  wx:for="{{user}}" bindtap="toPage" data-id="{{item.user_id}}">
+                    <view class="user-icon">
+                        <image class="user-icon" src='{{item.icon}}'mode='aspectFill'></image>
+                    </view>
+                    <view class="user-nickname">{{item.nickname}} </view>
+                </view>     
+        </view>
+    </view>
+    <!-- 热门 --> 
+    <view class="look hot-rank" hover-class="none" hover-stop-propagation="false">
+        <view class="one">
+            <view class="name">热门</view>
+            <view class="detail" bindtap="toViewAll">查看全部</view>
+        </view>
+        <swiper class='two' indicator-dots='true' circular='true'>
+            <view wx:for="{{result}}" wx:for-index="index">
+                <swiper-item>
+                    <view wx:for="{{array[item.page]}}" >
+                        <view class="content">
+                            <image class="content-icon" src="{{item.accustom_icon}}" mode="aspectFill"></image>
+                            <view class="content-mid">
+                                <view class="content-name">{{item.accustom_name}}</view>
+                                <view class="nums">已有{{item.insist_nums}}位朋友在坚持</view>
+                            </view>
+                            <view class="entry" id="{{item.accustom_name}}" bindtap="entry">加入</view>
+                        </view>
+                    </view>
+                </swiper-item>
+            </view>
+        </swiper>
+    </view>
+    <!-- 健康 -->
+    <view class="look health" hover-class="none" hover-stop-propagation="false">
+         <view class="one" hover-class="none" hover-stop-propagation="false">
+            <view class="name">健康</view>
+            <view class="detail">查看全部</view>
+        </view>
+        <swiper class='two' indicator-dots='true' circular='true'>
+            <view wx:for="{{result}}" wx:for-index="index">
+                <swiper-item>
+                    <view wx:for="{{health[item.page]}}" >
+                        <view class="content">
+                            <image class="content-icon" src="{{item.accustom_icon}}" mode="aspectFill"></image>
+                            <view class="content-mid">
+                                <view class="content-name">{{item.accustom_name}}</view>
+                                <view class="nums">已有{{item.insist_nums}}位朋友在坚持</view>
+                            </view>
+                            <view class="entry" id="{{item.accustom_name}}" bindtap="entry">加入</view>
+                        </view>
+                    </view>
+                </swiper-item>
+            </view>
+        </swiper>
+    </view>
+    <!-- 学习 -->
+    <view class="look study" hover-class="none" hover-stop-propagation="false">
+        <view class="one" hover-class="none" hover-stop-propagation="false">
+            <view class="name">学习</view>
+            <view class="detail">查看全部</view>
+        </view>
+        <swiper class='two' indicator-dots='true' circular='true'>
+            <view wx:for="{{result}}" wx:for-index="index">
+                <swiper-item>
+                    <view wx:for="{{study[item.page]}}" >
+                        <view class="content">
+                            <image class="content-icon" src="{{item.accustom_icon}}" mode="aspectFill"></image>
+                            <view class="content-mid">
+                                <view class="content-name">{{item.accustom_name}}</view>
+                                <view class="nums">已有{{item.insist_nums}}位朋友在坚持</view>
+                            </view>
+                            <view class="entry" id="{{item.accustom_name}}" bindtap="entry">加入</view>
+                        </view>
+                    </view>
+                </swiper-item>
+            </view>
+        </swiper>
+    </view>
+    <!-- 运动 -->
+    <view class="look think" hover-class="none" hover-stop-propagation="false">
+        <view class="one" hover-class="none" hover-stop-propagation="false">
+            <view class="name">运动</view>
+            <view class="detail">查看全部</view>
+        </view>
+        <swiper class='two' indicator-dots='true' circular='true'>
+            <view wx:for="{{result}}" wx:for-index="index">
+                <swiper-item>
+                    <view wx:for="{{sport[item.page]}}" >
+                        <view class="content">
+                            <image class="content-icon" src="{{item.accustom_icon}}" mode="aspectFill"></image>
+                            <view class="content-mid">
+                                <view class="content-name">{{item.accustom_name}}</view>
+                                <view class="nums">已有{{item.insist_nums}}位朋友在坚持</view>
+                            </view>
+                            <view class="entry" id="{{item.accustom_name}}" bindtap="entry">加入</view>
+                        </view>
+                    </view>
+                </swiper-item>
+            </view>
+        </swiper>
+    </view>
+    <!-- 生活 -->
+    <view class="look morning" hover-class="none" hover-stop-propagation="false">
+        <view class="one" hover-class="none" hover-stop-propagation="false">
+            <view class="name">生活</view>
+            <view class="detail">查看全部</view>
+        </view>
+        <swiper class='two' indicator-dots='true' circular='true'>
+            <view wx:for="{{result}}" wx:for-index="index">
+                <swiper-item>
+                    <view wx:for="{{life[item.page]}}" >
+                        <view class="content">
+                            <image class="content-icon" src="{{item.accustom_icon}}" mode="aspectFill"></image>
+                            <view class="content-mid">
+                                <view class="content-name">{{item.accustom_name}}</view>
+                                <view class="nums">已有{{item.insist_nums}}位朋友在坚持</view>
+                            </view>
+                            <view class="entry" id="{{item.accustom_name}}" bindtap="entry">加入</view>
+                        </view>
+                    </view>
+                </swiper-item>
+            </view>
+        </swiper>
+    </view>
+    <!-- 其他 -->
+    <view class="look night" hover-class="none" hover-stop-propagation="false">
+        <view class="one" hover-class="none" hover-stop-propagation="false">
+            <view class="name">其他</view>
+            <view class="detail">查看全部</view>
+        </view>
+        <swiper class='two' indicator-dots='true' circular='true'>
+            <view wx:for="{{result}}" wx:for-index="index">
+                <swiper-item>
+                    <view wx:for="{{Else[item.page]}}" >
+                        <view class="content">
+                            <image class="content-icon" src="{{item.accustom_icon}}" mode="aspectFill"></image>
+                            <view class="content-mid">
+                                <view class="content-name">{{item.accustom_name}}</view>
+                                <view class="nums">已有{{item.insist_nums}}位朋友在坚持</view>
+                            </view>
+                            <view class="entry" id="{{item.accustom_name}}" bindtap="entry">加入</view>
+                        </view>
+                    </view>
+                </swiper-item>
+            </view>
+        </swiper>
+    </view>
+</view>
+<navigator url="/pages/add/add" class="add-accustom" style="right: {{right}}; left: {{left}}; justify-content: {{start}}; padding-left: {{paddingLeft}};">
+    添加
+</navigator>
+<view class="bottom-box">
+    <button class="invite-friend" open-type="share">邀请好友</button>
+</view>
+

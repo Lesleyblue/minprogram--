@@ -1,0 +1,25 @@
+/* pages/record/record.wxss */
+page{
+    background-color: #eee;
+    box-sizing: border-box;
+}
+.row{
+    width: 100%px;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.icon{
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+.name{
+    font-size: 12px;
+    margin-left: 13px;
+}
+  
